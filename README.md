@@ -3,6 +3,9 @@ Swagger demo Spring Rest Application
 
 Implemented the Swagger in Spring Rest Application.
 These are the few output images of the  swagger-ui
+# Swagger-UI Home
+![image](https://user-images.githubusercontent.com/106923967/211060488-3a9b47a8-02bc-4540-b0cd-cb2371b6f91c.png)
+
 
 # swagger-UI for GET course by Code API
 
