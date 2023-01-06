@@ -1,3 +1,4 @@
 # swagger-demo
 Swagger demo Spring Rest Application
-![image](https://user-images.githubusercontent.com/106923967/211058567-be69faba-c948-49d8-bbee-ef5dc2c395b1.png)
+![image](https://user-images.githubusercontent.com/106923967/211058704-3b8e1880-ee89-41a2-8708-e365cd81eeba.png)
+
