@@ -3,6 +3,7 @@ package com.fullstack.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -27,6 +28,7 @@ public class CourseController {
 	@PostMapping("/add")
 	@ApiOperation(value = "Add your course here!!", notes = "Please add your courses to the list", response = Course.class)
 	public Course addCourse(@RequestBody Course course) {
+		String code=course.getCourseCode();
 		return courseService.addCourse(course);
 	}
 	
@@ -40,6 +42,15 @@ public class CourseController {
 	@ApiOperation(value = "Get all the Courses!!", notes = "Fetch all the available courses in the list", response = Course.class)
 	public List<Course> getAllCourses(){
 		return courseService.getAllCourses();
+		
+	}
+	
+	@DeleteMapping("/{code}")
+	@ApiOperation(value = "Remove a course from the list", notes = "Used to remove the course from the list of the courses",response = Course.class)
+	public Course deleteCourse(@PathVariable("code") String code) {
+		Course course=courseService.findCourseByCode(code);
+		courseService.deleteCourse(course);
+		return course;
 		
 	}
 }

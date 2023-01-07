@@ -8,5 +8,6 @@ public interface CourseService {
 	Course addCourse(Course course);
 	Course findCourseByCode(String code);
 	List<Course> getAllCourses();
+	void deleteCourse(Course course);
 	
 }

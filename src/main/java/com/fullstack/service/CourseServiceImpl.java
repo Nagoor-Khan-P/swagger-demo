@@ -39,4 +39,10 @@ public class CourseServiceImpl implements CourseService{
 		return courses;
 	}
 
+	@Override
+	public void deleteCourse(Course course) {
+		// TODO Auto-generated method stub
+		courseRepository.delete(course);
+	}
+
 }
