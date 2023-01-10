@@ -28,7 +28,6 @@ public class CourseController {
 	@PostMapping("/add")
 	@ApiOperation(value = "Add your course here!!", notes = "Please add your courses to the list", response = Course.class)
 	public Course addCourse(@RequestBody Course course) {
-		String code=course.getCourseCode();
 		return courseService.addCourse(course);
 	}
 	
