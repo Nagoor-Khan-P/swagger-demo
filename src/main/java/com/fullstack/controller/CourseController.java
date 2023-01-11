@@ -45,7 +45,7 @@ public class CourseController {
 	}
 	
 	@DeleteMapping("/{code}")
-	@ApiOperation(value = "Remove a course from the list", notes = "Used to remove the course from the list of the courses",response = Course.class)
+	@ApiOperation(value = "Remove a course from the course list", notes = "Used to remove the course from the list of the courses",response = Course.class)
 	public Course deleteCourse(@PathVariable("code") String code) {
 		Course course=courseService.findCourseByCode(code);
 		courseService.deleteCourse(course);
